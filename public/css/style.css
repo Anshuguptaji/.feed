@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+
+body
+{
+    font-family: 'Playfair Display', serif;
+}
+.navbar 
+{
+    font-family: 'IBM Plex Serif', serif !important;
+}
+
+.follow-profile
+{
+    font-family: 'Source Serif Pro', serif;
+}
+.image-position
+{
+    width: 100;
+    height: 200px;
+    object-fit: contain;
+}
+.master-row
+{
+    border: 1px solid #000;
+    border-radius: 15px;
+    -webkit-box-shadow: 12px 12px 0px -3px rgba(0,0,0,0.92);
+    -moz-box-shadow: 12px 12px 0px -3px rgba(0,0,0,0.92);
+    box-shadow: 12px 12px 0px -3px rgba(0,0,0,0.92);
+}
+
+.border-kanan
+{
+    height: 40px;
+    border-right: 1px solid #000;
+}
+
+.master-box
+{
+    height: auto;
+}
+
+.kotak-login
+{
+    width: 50%;
+    border: 1px solid #000;
+}
