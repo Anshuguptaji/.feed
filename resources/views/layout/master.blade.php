@@ -24,10 +24,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('login') ? 'active' : '' }}" href="login"><h5>Login</h5></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('logout') ? 'active' : '' }}" href="/logout"><h5>Logout</h5></a>
+                        <a class="nav-link {{ request()->is('logout') ? 'active' : '' }}" href="logout"><h5>Logout</h5></a>
                     </li>
                 </ul>
                 </div>

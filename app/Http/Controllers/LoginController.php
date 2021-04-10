@@ -23,19 +23,20 @@ class LoginController extends Controller
 
         if (!empty($data)) {
             if ($data['username'] == $request->input('username') && $data['password'] == $request->input('password')) {
-                $request->session()->put('user', $request->input('username'));
+                $request->session()->put('user', $data->username);
                 return redirect('me');
             }else{
-                return redirect('/login')->with('error', 'Username/Password anda salah');
+                return redirect('login')->with('error', 'Username/Password anda salah');
             }
         }else{
-            return redirect('/login')->with('error', 'Username/Password anda salah');
+            return redirect('login')->with('error', 'Username/Password anda salah');
         }
     }
 
     public function logout(Request $request)
     {
         $request->session()->forget('user');
-        return redirect('/login');
+        return redirect('login');
+        
     }
 }

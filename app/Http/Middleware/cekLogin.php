@@ -12,7 +12,7 @@ class CekLogin
         if(Session::has('user')){
             return $next($request);
 		}else{
-			return redirect('/login')->with('error', 'Anda Harus Login Terlebih Dahulu');
+			return redirect('login')->with('error', 'Anda Harus Login Terlebih Dahulu');
 		}
     }
 }
