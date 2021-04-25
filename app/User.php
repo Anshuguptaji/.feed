@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'username', 'password',
     ];
 
     /**
@@ -36,4 +36,54 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function boot()
+    {
+
+        parent::boot();
+
+        static::created(function ($user) {
+            $user->profile()->create([
+                // 'image' => '/profile/default.png',
+
+            ]);
+        });
+    }
+
+    // Relationship between User & Profile
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
+    }
+
+    public function stories()
+    {
+        return $this->hasMany(Story::class);
+    }
+
+    public function following()
+    {
+        return $this->belongsToMany(Profile::class)->withTimestamps();
+    }
+
+    // change default search by id to username for ex
+    public function getRouteKeyName()
+    {
+        return 'username';
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
+    }
 }
