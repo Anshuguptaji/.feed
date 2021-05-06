@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title', => 'post'])
+@extends('layouts.app')
 
 @section('content')
 
@@ -244,7 +244,7 @@
 
                     <!-- CopyRight -->
                     <div>
-                        <span style='color: #a6b3be;'>© 2021 .feed by Headsynclabs</span>
+                        <span style="color: #a6b3be;">© 2021 .feed by Headsynclabs</span>
                     </div>
 
                 </div>
