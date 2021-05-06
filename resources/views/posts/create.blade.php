@@ -14,6 +14,7 @@
                 
                     <form action="/p/" method="POST" enctype="multipart/form-data">
                         @csrf
+                        @method('POST')
 
                         <div class="form-group row">
                             <label for="caption" class="col-md-4 col-form-label text-md-right"><strong>Caption</strong></label>
